@@ -14,4 +14,7 @@ def create_app():
     def hello():
         return 'Welcome to Market Place!'
 
+    from .home import home_bp
+    app.register_blueprint(home_bp, url_prefix='/home')
+
     return app
